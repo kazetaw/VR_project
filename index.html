@@ -59,7 +59,18 @@
       </a-entity>
       </a-entity>
       <a-entity camera position="0 2 15" look-controls wasd-controls=""></a-entity>    
-    
+    <a-entity position="0 1.5 -2">
+  <!-- แผ่นป้าย -->
+  <a-plane position="0 2 0" rotation="-90 0 0" width="3" height="1.5" color="#555" opacity="0.8" static-body="shape:box"></a-plane>
+
+  <!-- ข้อความบนแผ่นป้าย -->
+  <a-text position="0 2.2 0.1" align="center" value="จอทีวี" color="#fff"></a-text>
+
+  <!-- วิดีโอที่จะเล่น -->
+</a-entity>
+<!--จอ-->
+<a-video position="-8 3.5a 8.1" src="video.mp4" width="8.4" height="4.2" position="0 2 0.1" autoplay="true" loop="true"></a-video>
+
     </a-scene>
     </body>
 </html>
