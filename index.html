@@ -27,42 +27,40 @@
       <a-entity>
         
         <!-- ผนังหน้า -->
-        <a-box position="0 2 -20" width="40" height="10" depth="0.1" color="#ffcc66" static-body="shape:box"></a-box>
-        <a-plane position="19.5 5 0" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg" static-body="shape:plane"></a-plane>
-        <a-plane position="19.5 2 8" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg" static-body="shape:plane"></a-plane>
+        <a-box position="13 2 -13" rotation="0 0 0" width="15" height="10" depth="0.1" color="#ffcc66"></a-box>
 
+        <a-box position="0 2 -20" width="40" height="10" depth="0.1" color="#ffcc66" static-body="shape:box"></a-box>
+        <a-plane position="19.4 5 0" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg" static-body="shape:plane"></a-plane>
+        <a-plane position="19.4 5 8" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg" static-body="shape:plane"></a-plane>
         <!-- ผนังหลัง -->
         <a-box position="0 2 20" width="40" height="10" depth="0.1" color="#ffcc66" static-body="shape:box"></a-box>
 
         <!-- ผนังข้าง -->
         <a-box position="-20 2 0" width="0.1" height="10" depth="40" color="#ffcc66" static-body="shape:box"></a-box>
-        <a-box position="20 2 0" width="0.1" height="10" depth="40" color="#ffcc66" static-body="shape:box"></a-box>
+        <a-box position="20 2 0" width="1" height="10" depth="40" color="#ffcc66" static-body="shape:box"></a-box>
+        <a-box position="5.5 2 -15.5" width="0.1" height="10" depth="5" color="#ffcc66"></a-box>
 
         <!-- หลังคา -->
 
         <!-- โมเดลตรงกลาง -->
-        <a-entity position="0 0 0" static-body="shape:box">
-        
+        <a-box position="-9 2 0" width="10" height="10" depth="10" color="#0000" static-body="shape: box"></a-box>
+
+
           <!-- โมเดล -->
           <a-entity gltf-model="#triceratops" scale="0.05 0.05 0.05" dynamic-body></a-entity>
           
           <!-- เพิ่มโมเดลที่นี่ -->
-          <a-box  position="0 0 17.5" width="10" height="10" depth="5" color="#ffcc66" static-body="shape:box">
-            <!-- Wall inside the box -->
-            <a-box position="0 0 2.5" width="10" height="10" depth="0.1" color="#ffcc66" static-body="shape:box"></a-box>
-          </a-box>
-          <a-box  position="0 0 30" width="10" height="10" depth="5" color="#ffcc66" static-body="shape:box"></a-box>
+
 
         </a-entity>
         <a-image></a-image>
       </a-entity>
 
-      <!-- Player (Camera) -->
-        <a-cursor></a-cursor>
+      
+        
       </a-entity>
 
-      <a-sky color="#0000"></a-sky>
       
-    </a-scene>
+      <a-entity camera position="0 2 15" look-controls wasd-controls=""></a-entity>    </a-scene>
   </body>
 </html>
