@@ -2,41 +2,63 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>บ้าน</title>
+    <title>พิพิธภัณฑ์</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.1.0/dist/aframe-physics-system.min.js"></script>
   </head>
   <body>
-    <a-scene>
-
+    <a-scene physics="gravity: -9.8">
+      <a-assets timeout="10000">
+        <!-- Model source: https://sketchfab.com/3d-models/triceratops-d16aabe33dc24f8ab37e3df50c068265 -->
+        <!-- Model author: https://sketchfab.com/VapTor -->
+        <!-- Model license: Sketchfab Standard -->
+        <a-asset-item id="triceratops"
+          src="https://cdn.aframe.io/examples/ar/models/triceratops/scene.gltf"
+          response-type="arraybuffer"></a-asset-item>
+    
+        <img id="shadow" src="shadow.png"></img>
+        <a-asset-item id="messageText" src="message.html"></a-asset-item>
+      </a-assets>
       <!-- พื้นที่ -->
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="60" height="60" color="#7BC8A4"></a-plane>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="60" height="60" color="#99CCCC" static-body="shape:none"></a-plane>
 
       <!-- บ้าน -->
       <a-entity>
+        
         <!-- ผนังหน้า -->
-        <a-box position="0 2 -20" width="40" height="10" depth="0.1" color="#ffcc66"></a-box>
-        <a-plane position="19.5 5 0" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg"></a-plane>
-        <a-plane position="19.5 2 8" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg"></a-plane>
+        <a-box position="0 2 -20" width="40" height="10" depth="0.1" color="#ffcc66" static-body="shape:box"></a-box>
+        <a-plane position="19.5 5 0" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg" static-body="shape:plane"></a-plane>
+        <a-plane position="19.5 2 8" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg" static-body="shape:plane"></a-plane>
 
         <!-- ผนังหลัง -->
-        <a-box position="0 2 20" width="40" height="10" depth="0.1" color="#ffcc66"></a-box>
+        <a-box position="0 2 20" width="40" height="10" depth="0.1" color="#ffcc66" static-body="shape:box"></a-box>
 
         <!-- ผนังข้าง -->
-        <a-box position="-20 2 0" width="0.1" height="10" depth="40" color="#ffcc66"></a-box>
-        <a-box position="20 2 0" width="0.1" height="10" depth="40" color="#ffcc66"></a-box>
+        <a-box position="-20 2 0" width="0.1" height="10" depth="40" color="#ffcc66" static-body="shape:box"></a-box>
+        <a-box position="20 2 0" width="0.1" height="10" depth="40" color="#ffcc66" static-body="shape:box"></a-box>
 
         <!-- หลังคา -->
 
         <!-- โมเดลตรงกลาง -->
-        <a-entity position="0 2 0">
+        <a-entity position="0 0 0" static-body="shape:box">
         
           <!-- โมเดล -->
+          <a-entity gltf-model="#triceratops" scale="0.05 0.05 0.05" dynamic-body></a-entity>
+          
           <!-- เพิ่มโมเดลที่นี่ -->
-          <a-box  position="10 0 17.5" width="10" height="10" depth="5" color="ffcc66"></a-box>
-          <a-box  position="0 0 0" width="10" height="10" depth="10" color="#ffcc66"></a-box>
+          <a-box  position="0 0 17.5" width="10" height="10" depth="5" color="#ffcc66" static-body="shape:box">
+            <!-- Wall inside the box -->
+            <a-box position="0 0 2.5" width="10" height="10" depth="0.1" color="#ffcc66" static-body="shape:box"></a-box>
+          </a-box>
+          <a-box  position="0 0 30" width="10" height="10" depth="5" color="#ffcc66" static-body="shape:box"></a-box>
+
         </a-entity>
         <a-image></a-image>
+      </a-entity>
+
+      <!-- Player (Camera) -->
+        <a-cursor></a-cursor>
       </a-entity>
 
       <a-sky color="#0000"></a-sky>
