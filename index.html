@@ -23,36 +23,43 @@
       </a-assets>
       <!-- พื้น-->
       <a-plane position="0 0 -4" rotation="-90 0 0" width="60" height="60" color="#99CCCC" static-body="shape:none"></a-plane>
-
+<!--หลังคา-->
+<a-box position="0 7.5 0" width="80" height="1" depth="40" color="#990033"></a-box>
       
       <a-entity>
         <!-- ผนังหน้า -->
 
         <a-box position="0 2 -20" width="40" height="10" depth="0.1" color="#ffcc66" static-body="shape:box"></a-box>
         <a-plane position="19.4 5 0" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg" static-body="shape:plane"></a-plane>
-        <a-plane position="19.4 5 8" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg" static-body="shape:plane"></a-plane>
         <!-- ผนังหลัง -->
         <a-box position="0 2 20" width="40" height="10" depth="0.1" color="#ffcc66" static-body="shape:box"></a-box>
 
         <!-- ผนังข้าง -->
         <a-box position="-20 2 0" width="0.1" height="10" depth="40" color="#ffcc66" static-body="shape:box"></a-box>
         <a-box position="20 2 0" width="1" height="10" depth="40" color="#ffcc66" static-body="shape:box"></a-box>
-        <a-box position="5.5 2 -15.5" width="0.1" height="10" depth="5" color="#ffcc66"></a-box>
 
         <!-- หลังคา -->
-        <a-box position="0 0 0" width="11" height="1" depth="13" color="#b87333" dynamic-body></a-box>
+        <a-box position="0 0 0" width="11" height="1" depth="13" color="#ffcc66" dynamic-body></a-box>
 
         <!-- โมเดลตรงกลาง -->
         <a-box position="-9 2 0" width="13" height="10" depth="16" color="#ffcc66" static-body="shape: box"></a-box>
         <!--โซฟา-->
         <a-box position="15 0 15" width="10" height="1" depth="10" color="#ffcc66" dynamic-body></a-box>
           <!-- โมเดล -->
-          <a-entity gltf-model="#triceratops" scale="0.05 0.05 0.05" dynamic-body></a-entity>
+          <a-entity position="0 0.5" gltf-model="#triceratops" scale="0.05 0.05 0.05" dynamic-body></a-entity>
           <!-- เพิ่มโมเดลที่นี่ -->
         </a-entity>
-        <a-image></a-image>
+        <a-entity>
+          <!-- แผ่นป้าย -->
+          <a-plane position="0.3 2 9" rotation="0 0 0" width="2" height="1" color="#ffffff" opacity="0.8" static-body="shape:box"></a-plane>
+      
+          <!-- ข้อความ -->
+          <a-text position="0.3 2 9.1" align="center" value="Hello" color="#000" width="15"></a-text>
+        </a-entity>
       </a-entity>
       </a-entity>
-      <a-entity camera position="0 2 15" look-controls wasd-controls=""></a-entity>    </a-scene>
-  </body>
+      <a-entity camera position="0 2 15" look-controls wasd-controls=""></a-entity>    
+    
+    </a-scene>
+    </body>
 </html>
