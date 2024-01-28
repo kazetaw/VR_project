@@ -1,80 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>พิพิธภัณฑ์</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.1.0/dist/aframe-physics-system.min.js"></script>
-  </head>
-  <body>
-    <a-scene physics="gravity: -9.8">    
-      <!--โมเดลไดโน-->  
-      <a-assets timeout="10000">
-        <!-- Model source: https://sketchfab.com/3d-models/triceratops-d16aabe33dc24f8ab37e3df50c068265 -->
-        <!-- Model author: https://sketchfab.com/VapTor -->
-        <!-- Model license: Sketchfab Standard -->
-        <a-asset-item id="triceratops"
-          src="https://cdn.aframe.io/examples/ar/models/triceratops/scene.gltf"
-          response-type="arraybuffer"></a-asset-item>
+
+<head>
+  <meta charset="utf-8">
+  <title>พิพิธภัณฑ์</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script
+    src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.1.0/dist/aframe-physics-system.min.js"></script>
+</head>
+
+<body>
+  <a-scene physics="gravity: -9.8">
     
-        <img id="shadow" src="shadow.png"></img>
-        <a-asset-item id="messageText" src="message.html"></a-asset-item>
-      </a-assets>
-      <!-- พื้น-->
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="60" height="60" color="##B0C4DE" static-body="shape:none"></a-plane>
-<!--หลังคา-->
-<a-box position="0 7.5 0" width="80" height="1" depth="40" color="#F5F5F5"></a-box>
-      
-      <a-entity>
-        <!-- ผนังหน้า -->
+    <!--โมเดลไดโน-->
+    <a-assets timeout="10000">
+      <!-- Model source: https://sketchfab.com/3d-models/triceratops-d16aabe33dc24f8ab37e3df50c068265 -->
+      <!-- Model author: https://sketchfab.com/VapTor -->
+      <!-- Model license: Sketchfab Standard -->
+      <a-asset-item id="triceratops" src="https://cdn.aframe.io/examples/ar/models/triceratops/scene.gltf"
+        response-type="arraybuffer"></a-asset-item>
+      <a-asset-item id="sofa_2" src="sofa_2/scene.gltf"></a-asset-item>
+      <img id="shadow" src="shadow.png"></img>
+      <a-asset-item id="messageText" src="message.html"></a-asset-item>
+    </a-assets>
+    <!-- พื้น-->
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="60" height="60" color="#B0C4DE"
+      static-body="shape:none"></a-plane>
+    <!--หลังคา-->
+    <a-box position="0 7.5 0" width="80" height="1" depth="40" color="#F5F5F5"></a-box>
 
-        <a-box position="0 2 -20" width="40" height="10" depth="0.1" color="#D3D3D3" static-body="shape:box"></a-box>
-        <a-plane position="19.4 5 0" rotation="0 -90 0" width="3" height="3" material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg" static-body="shape:plane"></a-plane>
-        <!-- ผนังหลัง -->
-        <a-box position="0 2 20" width="40" height="10" depth="0.1" color="#D3D3D3" static-body="shape:box"></a-box>
+    <a-entity>
+      <!-- ผนังหน้า -->
 
-        <!-- ผนังข้าง -->
-        <a-box position="-20 2 0" width="0.1" height="10" depth="40" color="#D3D3D3" static-body="shape:box"></a-box>
-        <a-box position="20 2 0" width="1" height="10" depth="40" color="#D3D3D3" static-body="shape:box"></a-box>
+      <a-box position="0 2 -20" width="40" height="10" depth="0.1" color="#D3D3D3" static-body="shape:box"></a-box>
+      <a-plane position="19.4 5 0" rotation="0 -90 0" width="3" height="3"
+        material="src: https://cdn.aframe.io/examples/ui/ponyo.jpg" static-body="shape:plane"></a-plane>
+      <!-- ผนังหลัง -->
+      <a-box position="0 2 20" width="40" height="10" depth="0.1" color="#D3D3D3" static-body="shape:box"></a-box>
 
-        <!-- หลังคา -->
-        <a-box position="0 0 0" width="11" height="1" depth="13" color="#D3D3D3" dynamic-body></a-box>
+      <!-- ผนังข้าง -->
+      <a-box position="-20 2 0" width="0.1" height="10" depth="40" color="#D3D3D3" static-body="shape:box"></a-box>
+      <a-box position="20 2 0" width="1" height="10" depth="40" color="#D3D3D3" static-body="shape:box"></a-box>
 
-        <!-- โมเดลตรงกลาง -->
-        <a-box position="-9 2 0" width="13" height="10" depth="16" color="#D3D3D3" static-body="shape: box"></a-box>
-        <!--โซฟา-->
-        <a-box position="15 0 15" width="10" height="1" depth="10" color="#D3D3D3" dynamic-body></a-box>
-          <!-- โมเดล -->
-          <a-entity position="0 0.5" gltf-model="#triceratops" scale="0.05 0.05 0.05" dynamic-body></a-entity>
-          <!-- เพิ่มโมเดลที่นี่ -->
-        </a-entity>
-        <!--ผนังหลังไดโนเสาอรื-->
-        <!-- ผนังตรงกลาง -->
-      <a-box position="10 0 -8" width="25" height="14" depth="0.1" color="#D3D3D3" static-body="shape:box"></a-box>
+      <!-- ที่ตั้งไดโน -->
+      <a-box position="0 0 0" width="11" height="1" depth="13" color="#708090" dynamic-body></a-box>
 
-        <a-entity>
-          <!-- แผ่นป้าย -->
-          <a-plane position="0.3 2 9" rotation="0 0 0" width="2" height="1" color="#ffffff" opacity="0.8" static-body="shape:box"></a-plane>
-      
-          <!-- ข้อความ -->
-          <a-text position="0.3 2 9.1" align="center" value="Hello" color="#000" width="15"></a-text>
-        </a-entity>
-      </a-entity>
-      </a-entity>
-      <a-entity camera position="0 2 15" look-controls wasd-controls=""></a-entity>    
+      <!-- โมเดลตรงกลาง -->
+      <a-box position="-9 2 0" width="13" height="10" depth="16" color="#D3D3D3" static-body="shape: box"></a-box>
+
+      <!--เวที-->
+      <a-box position="15 0 15" width="10" height="1" depth="10" color="#D3D3D3" dynamic-body></a-box>
+      <!-- โมเดล -->
+      <a-entity position="0 0.5" gltf-model="#triceratops" scale="0.05 0.05 0.05" dynamic-body></a-entity>
+      <!-- เพิ่มโมเดลที่นี่ -->
+      <!-- sofa -->
+      <a-gltf-model id="sofa_2" src="#sofa_2" position="-18 0 17" rotation="0 90 0"
+        animation-mixer="" scale="0.004 0.004 0.004" visible="" gltf-model="">
+      </a-gltf-model>
+      <a-gltf-model src="https://p.turbosquid.com/ts-thumb/21/FSR9fb/xv/00/jpg/1663936260/1920x1080/fit_q87/e76e652fdfe9ec43bbf660af99299934982f41ad/00.jpg"
+        scale="0.1 0.1 0.1" dynamic-body></a-gltf-model>
+
+    </a-entity>
+    <!--ผนังหลังไดโนเสาอรื-->
+    <!-- ผนังตรงกลาง -->
+    <a-box position="10 0 -8" width="25" height="14" depth="0.1" color="#D3D3D3" static-body="shape:box"></a-box>
+
+    <a-entity>
+      <!-- แผ่นป้าย -->
+      <a-plane position="0.3 2 9" rotation="0 0 0" width="2" height="1" color="#ffffff" opacity="0.8"
+        static-body="shape:box"></a-plane>
+
+      <!-- ข้อความ -->
+      <a-text position="0.3 2 9.1" align="center" value="Hello" color="#000" width="15"></a-text>
+    </a-entity>
+    </a-entity>
+    </a-entity>
+    <a-entity camera position="0 2 15" look-controls wasd-controls=""></a-entity>
     <a-entity position="0 1.5 -2">
-  <!-- แผ่นป้าย -->
-  <a-plane position="0 2 0" rotation="-90 0 0" width="3" height="1.5" color="#555" opacity="0.8" static-body="shape:box"></a-plane>
-  <!-- ข้อความบนแผ่นป้าย -->
-  <a-text position="0 2.2 0.1" align="center" value="จอทีวี" color="#fff"></a-text>
+      <!-- แผ่นป้าย -->
+      <a-plane position="0 2 0" rotation="-90 0 0" width="3" height="1.5" color="#555" opacity="0.8"
+        static-body="shape:box"></a-plane>
+      <!-- ข้อความบนแผ่นป้าย -->
+      <a-text position="0 2.2 0.1" align="center" value="จอทีวี" color="#fff"></a-text>
 
-  <!-- วิดีโอที่จะเล่น -->
-</a-entity>
-<!--จอ-->
-<a-video position="-8 3.5a 8.1" src="video.mp4" width="8.4" height="4.2" position="0 2 0.1" autoplay="true" loop="true"></a-video>
-<!--TEST-->
+      <!-- วิดีโอที่จะเล่น -->
+    </a-entity>
+    <!--จอ-->
+    <a-video position="-8 3.5a 8.1" src="video.mp4" width="8.4" height="4.2" position="0 2 0.1" autoplay="true"
+      loop="true"></a-video>
+    <!--TEST-->
+    <!--Model 3D-->
 
-    </a-scene>
-    </body>
+  </a-scene>
+</body>
+
 </html>
