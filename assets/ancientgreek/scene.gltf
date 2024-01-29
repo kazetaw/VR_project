@@ -1,0 +1,375 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 8120,
+      "max": [
+        1.267199993133545,
+        1.267199993133545,
+        3.9502999782562256
+      ],
+      "min": [
+        -1.267199993133545,
+        -1.267199993133545,
+        0.13294999301433563
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 97440,
+      "componentType": 5126,
+      "count": 8120,
+      "max": [
+        0.9999974370002747,
+        0.9999913573265076,
+        0.9992427229881287
+      ],
+      "min": [
+        -0.9999999403953552,
+        -0.9999881386756897,
+        -0.9992750287055969
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 8120,
+      "max": [
+        0.8142099976539612,
+        0.8983799815177917
+      ],
+      "min": [
+        0.19912999868392944,
+        0.1331000030040741
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 46464,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 194880,
+      "componentType": 5126,
+      "count": 7102,
+      "max": [
+        1.2175899744033813,
+        1.2175899744033813,
+        3.7690999507904053
+      ],
+      "min": [
+        -1.2175899744033813,
+        -1.2175899744033813,
+        -0.17257000505924225
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 280104,
+      "componentType": 5126,
+      "count": 7102,
+      "max": [
+        0.999993622303009,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999493956565857,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 64960,
+      "componentType": 5126,
+      "count": 7102,
+      "max": [
+        0.9735100269317627,
+        0.8545299768447876
+      ],
+      "min": [
+        0.2111700028181076,
+        0.11965999752283096
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 185856,
+      "componentType": 5125,
+      "count": 38784,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Davide Specchi (https://sketchfab.com/Davide.Specchi)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ancient-greek-jar-7c1c123891d6465f8d94a9e52c3f5885",
+      "title": "Ancient Greek Jar"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 340992,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 121776,
+      "byteOffset": 340992,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 365328,
+      "byteOffset": 462768,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 828096,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/VASO_4_diffuse.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "diffuseTexture": {
+            "index": 0
+          },
+          "glossinessFactor": 0.2804878048780487,
+          "specularFactor": [
+            0.45121951219512196,
+            0.45121951219512196,
+            0.45121951219512196
+          ],
+          "specularGlossinessTexture": {
+            "index": 0
+          }
+        }
+      },
+      "name": "VASO_4"
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            0.005097615027984815,
+            0.00278464551270586,
+            0.0005091665743297127,
+            1.0
+          ],
+          "glossinessFactor": 0.4207317073170732,
+          "specularFactor": [
+            0.010299700791112492,
+            0.00437044430817813,
+            0.0005228049647135444
+          ]
+        }
+      },
+      "name": "NERO.001"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "vaso 4_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "vaso 4_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        3,
+        5
+      ],
+      "name": "Root"
+    },
+    {
+      "name": "Camera",
+      "rotation": [
+        0.5807531476020813,
+        -0.14669080078601837,
+        -0.20407111942768097,
+        0.7743142247200012
+      ],
+      "translation": [
+        -0.5933899879455566,
+        -8.92236042022705,
+        2.1250600814819336
+      ]
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.8119700000000001,
+        -3.5979300000000003,
+        2.98156,
+        1.0
+      ],
+      "name": "Point.001"
+    },
+    {
+      "name": "Point.001"
+    },
+    {
+      "children": [
+        6,
+        7
+      ],
+      "matrix": [
+        0.99997,
+        0.0072000000000000015,
+        0.0,
+        0.0,
+        -0.0072000000000000015,
+        0.99997,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -0.12249000000000002,
+        -0.0008800000000000002,
+        0.0,
+        1.0
+      ],
+      "name": "vaso 4"
+    },
+    {
+      "mesh": 0,
+      "name": "vaso 4_0"
+    },
+    {
+      "mesh": 1,
+      "name": "vaso 4_1"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
